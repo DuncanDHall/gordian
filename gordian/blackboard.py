@@ -7,7 +7,7 @@ from utils import ReversibleDict
 
 class BlackBoard:
     def __init__(self):
-        self.unit_roles = UnitRoles()
+        self.unit_roles: UnitRoles[int, Role] = UnitRoles()
 
 
 class Role(Enum):
@@ -23,6 +23,4 @@ class UnitRoles(ReversibleDict[int, Role]):
         return self.inv.get(role, [])
 
     def __getitem__(self, tag: int) -> Role:
-        if tag in self:
-            return self[tag]
-        return Role.IDLE
+        return super().get(tag, Role.IDLE)

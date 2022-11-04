@@ -13,6 +13,12 @@ class Manager:
         self.ai = ai
         self.blackboard = blackboard
 
+    def on_before_start(self):
+        pass
+
+    def on_start(self):
+        pass
+
     @abstractmethod
     def on_step(self, iteration: int):
         pass

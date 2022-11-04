@@ -1,4 +1,4 @@
-from manager import Manager
+from managers.manager import Manager
 
 
 class SomeManager(Manager):

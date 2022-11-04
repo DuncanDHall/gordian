@@ -12,3 +12,4 @@ class Scheduler:
         # could prioritize managers depending on the blackboard
         for manager in self.managers:
             manager.on_step(iteration)
+
