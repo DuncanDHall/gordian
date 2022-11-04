@@ -27,6 +27,7 @@ typing-extensions = "==3.10.0.2"
 win32-setctime = "==1.1.0"
 yarl = "==1.7.2"
 zipp = "==3.7.0"
+bidict = "*"
 
 [dev-packages]
 
