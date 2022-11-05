@@ -8,7 +8,6 @@ from sc2.position import Point2
 from sc2.unit import Unit
 
 MINING_RADIUS = 1.325
-MINING_RADIUS = 1.325
 
 
 class MiningBooster(Manager):

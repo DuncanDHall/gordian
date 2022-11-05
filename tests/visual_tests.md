@@ -6,6 +6,7 @@ These are tests/verifications that I have not figured out how to put into code y
 - [ ] speed mining
 
 ## Build
+- [ ] structure positions
 
 
 ## Strategy/responses
