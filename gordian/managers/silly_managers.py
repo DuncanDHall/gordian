@@ -1,4 +1,4 @@
-from manager import Manager
+from manager_base import Manager
 
 
 class WorkerRushManager(Manager):

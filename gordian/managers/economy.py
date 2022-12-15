@@ -1,7 +1,7 @@
 from typing import List, Dict, Optional
 
 import sc2math
-from managers.manager import Manager
+from managers.manager_base import Manager
 from blackboard import Role
 from sc2.ids.ability_id import AbilityId
 from sc2.position import Point2

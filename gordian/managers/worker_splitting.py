@@ -1,4 +1,4 @@
-from managers.manager import Manager
+from managers.manager_base import Manager
 from sc2.units import Units
 
 

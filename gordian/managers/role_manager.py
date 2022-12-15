@@ -1,5 +1,5 @@
 from blackboard import Role
-from managers.manager import Manager
+from managers.manager_base import Manager
 
 
 class RoleManager(Manager):

@@ -1,15 +1,14 @@
 from abc import ABCMeta, abstractmethod
 
-from blackboard import BlackBoard
+from blackboard import Blackboard
 from sc2.bot_ai import BotAI
 
 
-class Manager:
+class Manager(metaclass=ABCMeta):
     ai: BotAI
-    blackboard: BlackBoard
-    __metaclass__ = ABCMeta
+    blackboard: Blackboard
 
-    def __init__(self, ai: BotAI, blackboard: BlackBoard):
+    def __init__(self, ai: BotAI, blackboard: Blackboard):
         self.ai = ai
         self.blackboard = blackboard
 
