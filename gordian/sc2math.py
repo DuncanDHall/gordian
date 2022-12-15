@@ -4,6 +4,9 @@ from typing import List
 from sc2.position import Point2
 
 
+def linear_distance(p0: Point2, p1: Point2) -> float:
+    return math.dist((p0.x, p0.y), (p1.x, p1.y))
+
 
 # MARK: - Everything following I owe to sharpy: https://github.com/DrInfy/sharpy-sc2
 

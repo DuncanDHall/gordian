@@ -1,7 +1,7 @@
-from managers.manager import Manager
+from managers.manager_base import Manager
 
 
-class Scheduler:
+class ManagerScheduler:
     managers: list[Manager]
 
     def __init__(self, managers, blackboard):
