@@ -7,6 +7,7 @@ from operations.operation_base import Operation
 
 class RootOperation(Operation):
     unit_assignment_desires = []
+    debug_color = (20, 230, 230)
 
     # TODO consider some default child_ops here
 

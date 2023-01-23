@@ -18,6 +18,7 @@ class Gordian(BotAI):
     root_op: RootOperation
 
     def __init__(self, wishlist: list[UnitOrUpgradeId]):
+        super().__init__()
         blackboard = Blackboard(wishlist)
         self.interpreter = Interpreter(self)
         self.root_op = PvXGlobalOp(self.interpreter, blackboard)
@@ -29,7 +30,10 @@ class Gordian(BotAI):
         self.root_op.on_start()
 
     async def on_step(self, iteration: int):
-        self.root_op.on_step(iteration)
+        try:
+            self.root_op.on_step(iteration)
+        except:
+            print('temporary measure')
 
     async def on_unit_destroyed(self, unit_tag: int):
         # TODO notify operations (recursively)

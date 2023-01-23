@@ -1,4 +1,4 @@
-from collections import Iterable
+from collections.abc import Iterable
 from typing import TypeVar, Dict, Tuple, Mapping, Generic, Callable
 
 _KT = TypeVar('_KT')

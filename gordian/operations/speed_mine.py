@@ -1,7 +1,7 @@
 from typing import Dict, Optional, Union
 
 import sc2math
-from operations.operation_base import Operation
+from operations.operation_base import Operation, UnitDesire
 from sc2.ids.ability_id import AbilityId
 from sc2.ids.unit_typeid import UnitTypeId
 from sc2.position import Point2
@@ -12,8 +12,12 @@ MINING_RADIUS = 1.325
 
 class SpeedMineOp(Operation):
     mining_stations: Optional[dict[int, Point2]]
-    unit_assignment_desires: [(200, UnitTypeId.PROBE), (200, UnitTypeId.SCV), (200, UnitTypeId.DRONE)]
-    debug = True
+    unit_assignment_desires = [
+        UnitDesire(200, UnitTypeId.PROBE, 2),
+        UnitDesire(200, UnitTypeId.SCV, 2),
+        UnitDesire(200, UnitTypeId.DRONE, 2),
+    ]
+    debug_color = (255, 139, 108)
 
     def on_start(self):
         self.mining_stations = self._calculate_mining_stations()
